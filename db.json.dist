@@ -1,0 +1,44 @@
+{
+    "filiais": [
+        {
+            "id": 1,
+            "nome": "Raul importados"
+        },
+        {
+            "id": 2,
+            "nome": "Raul variedades"
+        }
+    ],
+    "categorias": [
+        {
+            "id": 1,
+            "nome": "Informática",
+            "descricao": "Produtos de informática",
+            "foto": "https://www.microcenterinformatica.com.br/servicos/capa/1587687563.png"
+        },
+        {
+            "id": 2,
+            "nome": "Equipamentos de som 2",
+            "descricao": "Equipamentos de som em geral",
+            "foto": "https://www.microcenterinformatica.com.br/servicos/capa/1587687563.png"
+        },
+        {
+            "id": 3,
+            "nome": "Equipamentos de som 3",
+            "descricao": "Equipamentos de som em geral",
+            "foto": "https://www.microcenterinformatica.com.br/servicos/capa/1587687563.png"
+        },
+        {
+            "id": 4,
+            "nome": "Equipamentos de som 4",
+            "descricao": "Equipamentos de som em geral",
+            "foto": "https://www.microcenterinformatica.com.br/servicos/capa/1587687563.png"
+        },
+        {
+            "id": 5,
+            "nome": "Equipamentos de som 5",
+            "descricao": "Equipamentos de som em geral",
+            "foto": "https://www.microcenterinformatica.com.br/servicos/capa/1587687563.png"
+        }
+    ]
+}
