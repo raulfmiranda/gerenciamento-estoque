@@ -1,11 +1,4 @@
-function removeCategory(id) {
-    fetch('http://localhost:8000/categorias/' + id, {
-        method: 'DELETE'
-    });
-}
-
-
-function categories() {
+export default function categories() {
     fetch('http://localhost:8000/categorias')
         .then(response => response.json())
         .then(dados => {
@@ -18,7 +11,7 @@ function categories() {
                         <td><img src="${cat.foto}" width="100px"></td>
                         <td>
                             <button class="btn btn-outline-warning">Editar</button>
-                            <button onclick="removeCategory('${cat.id}')" class="btn btn-outline-danger">Excluir</button>
+                            <button data-bs-toggle="modal" data-bs-target="#modalExcluir" onclick="abrirModal('${cat.id}')" class="btn btn-outline-danger">Excluir</button>
                         </td>
                     <tr>
                 `;
@@ -42,5 +35,25 @@ function categories() {
             <tbody id="table_categories">
             </tbody>
         </table>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalExcluir" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Você tem certeza?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Essa ação é reversível.
+                <input type="hidden" id="input_excluir">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                <button onclick="removeCategory()" data-bs-dismiss="modal" type="button" class="btn btn-primary">Sim</button>
+            </div>
+            </div>
+        </div>
+        </div>
     `;
 }

@@ -17,7 +17,7 @@ function findAddress() {
         });
 }
 
-function addBranch() {
+export default function addBranch() {
     return `
         <h1>Cadastrar Filial</h1>
 
